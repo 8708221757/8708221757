@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Image Duel</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="app-header">
+    <h1>Image Duel</h1>
+    <div class="controls">
+      <button id="resetBtn" title="Reset eliminated images">Reset</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="status">
+      <div>Remaining images: <span id="remainingCount">0</span></div>
+      <div class="hint">Click the image you prefer. The other disappears forever.</div>
+    </section>
+
+    <section id="duel" class="duel" aria-live="polite">
+      <button id="leftCard" class="card" aria-label="Left image choice"></button>
+      <div class="vs">vs</div>
+      <button id="rightCard" class="card" aria-label="Right image choice"></button>
+    </section>
+
+    <section id="emptyState" class="empty hidden">
+      <p>No more images to compare. You eliminated all but one.</p>
+      <button id="showFinalBtn">Show final image</button>
+    </section>
+
+    <section id="finalState" class="final hidden">
+      <h2>Your top image</h2>
+      <img id="finalImage" alt="Final selected image">
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+  </body>
+</html>
